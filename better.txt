@@ -1,0 +1,4 @@
+while read -r pkg; do
+    sudo pacman -S --needed --noconfirm "$pkg" || echo "Skipping $pkg"
+done < pacman-packages.txt
+
